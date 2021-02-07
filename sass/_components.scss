@@ -1,0 +1,462 @@
+///////////////////////////////////////////////////////////////////////
+// HEADER
+////////////////////////////
+// SVGs
+.header__svg {
+    fill: $color-grey-light-4;
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+////////////////////////////
+// SEARCH COMPONENT
+.header__search-field {
+    background-color: $color-grey-light-2;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.6rem;
+    outline: none;
+    padding: 1rem 3rem;
+    width: 80%;
+
+    transition: all 0.4s;
+
+    &::placeholder {
+        color: $color-grey-light-4;
+    }
+
+    &:focus {
+        width: 100%;
+        background-color: $color-grey-light-3;
+    }
+}
+
+.header__search-icon {
+    cursor: pointer;
+    transform: translateX(-4rem);
+}
+
+////////////////////////////
+// USER'S TAB
+
+.header__user-icon--container {
+    align-self: stretch;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    padding: 0 2rem;
+    position: relative;
+
+    &:hover {
+        background-color: $color-grey-light-3;
+    }
+}
+
+.header__user-icon {
+}
+
+.header__user-img {
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+}
+
+///////////////////////////////////////////////////////////////////////
+// MAIN
+
+////////////////////////////
+// SIDEBAR COMPONENT
+.sidebar__container {
+    background-color: $color-grey-dark-1;
+    flex: 0 0 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar__container {
+    padding: 2rem 0;
+
+    @media only screen and (max-width: $width-1100) {
+        padding: 0;
+    }
+}
+
+.nav-menu {
+    list-style: none;
+
+    @media only screen and (max-width: $width-1100) {
+        display: flex;
+    }
+}
+
+.nav-menu__item {
+    @media only screen and (max-width: $width-1100) {
+        flex-grow: 1;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 0.5rem;
+
+        @media only screen and (max-width: $width-1100) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.nav-menu__link {
+    align-items: center;
+    color: $color-grey-light-1;
+    font-size: 1.6rem;
+    display: flex;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1.5rem 3rem;
+    position: relative;
+    z-index: 1;
+
+    @media only screen and (max-width: $width-600) {
+        padding: 1.2rem 1.2rem;
+    }
+
+    @media only screen and (max-width: $width-400) {
+        padding: 1rem 0.7rem;
+    }
+
+    &::before,
+    &--active::before {
+        background-color: $color-primary;
+        content: " ";
+        display: block;
+        left: 0;
+        height: 0;
+        position: absolute;
+        transition: height 0.2s, width 0.3s 0.2s;
+        width: 3px;
+    }
+
+    &--active::before {
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+    }
+
+    &:hover::before {
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+    }
+}
+
+.nav-menu__icon {
+    fill: $color-grey-light-1;
+    height: 2.5rem;
+    margin-right: 1.5rem;
+    width: 2.5rem;
+
+    @media only screen and (max-width: $width-600) {
+        height: 2rem;
+        margin-right: 1rem;
+        width: 2rem;
+    }
+}
+
+////////////////////////////
+// HOTEL PHOTOS CONTAINER
+.hotel-photos__container {
+    display: flex;
+}
+
+.hotel-photo {
+    height: 100%;
+    width: 33.33333%;
+}
+
+////////////////////////////
+// HOTEL DESCRIPTION
+.hotel-description__container,
+.hotel-info__container,
+.hotel-stars__container,
+.hotel-location__container {
+    display: flex;
+    align-items: center;
+}
+
+.hotel-info__container {
+    flex: 1 0;
+    justify-content: space-between;
+    padding: 1rem 2.5rem;
+
+    @media only screen and (max-width: $width-500) {
+        padding: 0.5rem 1rem;
+    }
+}
+
+.hotel-stars__container {
+    margin-left: 1rem;
+    margin-right: auto;
+}
+
+.hotel-stars__icon {
+    fill: $color-primary;
+    height: 2rem;
+    width: 2rem;
+
+    @media only screen and (max-width: $width-400) {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+}
+
+.hotel-rating__container {
+    background-color: $color-primary-light;
+    color: $color-grey-light-3;
+    text-align: center;
+    padding: 1.2rem 1.6rem;
+
+    @media only screen and (max-width: $width-500) {
+        padding: 0.8rem 1rem;
+    }
+}
+
+////////////////////////////
+// HOTEL OVERVIEW CONTAINER
+.hotel-main__container {
+    background-color: $color-grey-light-2;
+    display: flex;
+    gap: 5rem;
+    padding: 5rem;
+
+    @media only screen and (max-width: $width-1300) {
+        gap: 4rem;
+        padding: 4rem;
+    }
+
+    @media only screen and (max-width: $width-1200) {
+        -webkit-gap: 3rem;
+        gap: 3rem;
+        padding: 3rem;
+    }
+
+    @media only screen and (max-width: $width-900) {
+        -webkit-gap: 2rem;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    @media only screen and (max-width: $width-600) {
+        display: block;
+        padding: 0;
+    }
+}
+
+.hotel-overview__container {
+    align-self: flex-start;
+    background-color: $color-grey-light-1;
+    box-shadow: 0 0 2rem rgba(black, 0.1);
+    flex: 0 0 55%;
+    padding: 3.5rem 3rem;
+
+    @media only screen and (max-width: $width-1200) {
+        margin-right: 3rem;
+    }
+
+    @media only screen and (max-width: $width-900) {
+        margin-right: 2rem;
+    }
+
+    @media only screen and (max-width: $width-600) {
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+        padding: 1.5rem 1rem;
+    }
+}
+
+.hotel-reviews-info__area,
+.hotel-reviews-features__area {
+    border-bottom: 1px solid $color-grey-light-3;
+    display: block;
+}
+
+.hotel-reviews-features__area {
+    padding: 2rem 0;
+}
+
+.hotel-features__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.hotel-features__item {
+    align-items: center;
+    display: flex;
+    flex: 0 0 50%;
+    font-size: 1.6rem;
+    margin-bottom: 0.7rem;
+}
+
+.hotel-features__icon {
+    fill: $color-primary-light;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.hotel-reviews-recommendations__area {
+    align-items: center;
+    display: flex;
+    padding-top: 4rem;
+
+    @media only screen and (max-width: $width-600) {
+        padding-top: 1rem;
+    }
+}
+
+.recommendations-photo__container {
+    display: flex;
+}
+
+.recommendations-photo {
+    border: 3px solid white;
+    border-radius: 50%;
+    display: block;
+    height: 4rem;
+    width: 4rem;
+
+    &:not(:last-child) {
+        margin-right: -2rem;
+    }
+}
+
+////////////////////////////
+// HOTEL REVIEWS CONTAINER
+.hotel-reviews__container {
+    text-align: center;
+
+    @media only screen and (max-width: $width-600) {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-bottom: 1rem;
+    }
+}
+
+.review__container {
+    background-color: $color-grey-light-1;
+    box-shadow: 0 0 2rem rgba(black, 0.1);
+    padding: 3.5rem 3rem;
+    text-align: left;
+
+    margin-bottom: 4rem;
+
+    @media only screen and (max-width: $width-1200) {
+        margin-bottom: 3rem;
+    }
+
+    @media only screen and (max-width: $width-800) {
+        margin-bottom: 2rem;
+    }
+
+    @media only screen and (max-width: $width-600) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 0;
+        padding: 1.5rem 1rem;
+    }
+}
+
+.review-user__container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3rem;
+
+    @media only screen and (max-width: $width-600) {
+        padding-top: 2rem;
+    }
+}
+
+.review-user__photo {
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+}
+
+.review-user-details__container {
+    margin: 0 1rem;
+}
+
+////////////////////////////
+// HOTEL REVIEWS CONTAINER
+.cta__container {
+    padding: 4rem 0;
+    text-align: center;
+
+    @media only screen and (max-width: $width-600) {
+        padding: 3rem 0;
+    }
+
+    @media only screen and (max-width: $width-500) {
+        padding: 2rem 0;
+    }
+}
+
+.btn {
+    background: linear-gradient(
+        to right,
+        $color-primary-light,
+        $color-primary-dark
+    );
+    border: none;
+    border-radius: 5rem;
+    color: white;
+    cursor: pointer;
+    font-size: 1.7rem;
+    height: 2rem;
+    margin-top: 1.8rem;
+    outline: none;
+    overflow: hidden;
+    padding: 2rem 8rem;
+    position: relative;
+    text-transform: uppercase;
+    width: 10rem;
+
+    @media only screen and (max-width: $width-400) {
+        height: 1.5rem;
+        width: 7rem;
+    }
+
+    &__span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &:hover {
+        background: linear-gradient(
+            to left,
+            $color-primary-light,
+            $color-primary-dark
+        );
+    }
+
+    &:hover .btn-rooms-left__span {
+        transform: translate(-50%, -50%);
+    }
+
+    &:hover .btn-book__span {
+        transform: translate(-50%, 350%);
+    }
+}
+
+.btn-rooms-left__span {
+    transform: translate(-50%, -350%);
+    transition: transform 0.3s;
+    width: 100%;
+}
+
+.btn-book__span {
+    transition: transform 0.3s;
+}

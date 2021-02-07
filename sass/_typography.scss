@@ -1,0 +1,115 @@
+.header__username {
+    font-size: 1.6rem;
+}
+
+.header__user-notification {
+    background-color: $color-primary;
+    border-radius: 50%;
+    color: $color-grey-light-1;
+    height: 1.8rem;
+    width: 1.8rem;
+    text-align: center;
+    position: absolute;
+    top: 20%;
+    right: 20%;
+}
+
+.sidebar__copy {
+    color: $color-grey-light-4;
+    font-size: 1.2rem;
+    text-align: center;
+
+    @media only screen and (max-width: $width-1100) {
+        display: none;
+    }
+}
+
+.hotel-name {
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+
+    @media only screen and (max-width: $width-500) {
+        font-size: 1.8rem;
+    }
+}
+
+.link:link,
+.link:visited {
+    border-bottom: 1px solid currentColor;
+    color: $color-primary;
+    display: inline-block;
+    font-size: 1.4rem;
+    margin-left: 0.5rem;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: $color-grey-dark-1;
+}
+
+.link:active {
+    animation: pulsation 0.8s infinite;
+}
+
+.link-reviews {
+    @media only screen and (max-width: $width-600) {
+        margin: 1rem 0;
+    }
+}
+
+.hotel-rating {
+    font-size: 2.4rem;
+    font-weight: 300;
+    line-height: 1.2;
+
+    @media only screen and (max-width: $width-400) {
+        font-size: 2rem;
+    }
+}
+
+.hotel-votes {
+    font-size: 1.3rem;
+}
+
+.hotel-reviews-info {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+.recommendations {
+    font-size: 1.4rem;
+    margin-right: auto;
+}
+
+.review__text {
+    display: block;
+    font-size: 1.6rem;
+}
+
+.review-user__name {
+    color: $color-grey-dark-1;
+    display: block;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.review__date {
+    font-size: 1.2rem;
+}
+
+.review-score {
+    color: $color-primary;
+    font-size: 2.2rem;
+    font-weight: 300;
+}
+
+.cta {
+    font-size: 2.2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+
+    @media only screen and (max-width: $width-400) {
+        font-size: 1.8rem;
+    }
+}
